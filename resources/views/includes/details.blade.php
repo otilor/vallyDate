@@ -27,7 +27,7 @@
 			Role: Software Engineer
 		</h3>
 		<h4>Company name: Amazon Inc </h4>	
-		<h5><code class="text-dark">From: 2017 to 2020</code></h5>
+		<h5><code class="text-dark">From: 2009 to 2015</code></h5>
 		<span class="badge badge-success">Verified!</span>
 	</div>
 
