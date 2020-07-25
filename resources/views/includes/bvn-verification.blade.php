@@ -2,7 +2,7 @@
                         @csrf
                       <div class="form-group">
                         <label for="exampleFormControlInput1">BVN number</label>
-                        <input type="number" maxlength="11" name = "bvn" class="form-control" id="exampleFormControlInput1" placeholder="12345678901" data-toggle="tooltip" data-placement="top" title="Your details will be verified via your Bank Verification Number">
+                        <input type="text" pattern="\d*" maxlength="11"  name = "bvn" class="form-control" id="exampleFormControlInput1" placeholder="12345678901" data-toggle="tooltip" data-placement="top" title="Your details will be verified via your Bank Verification Number">
                       </div>
 
                       <div class="form-group">
