@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-class Helper
+class String
 {
 	public function getFullName($firstName, $lastName)
 	{
