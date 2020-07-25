@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Services\PayStackService;
+
 class Bvn
 {
 	public function resolveBvn($bvnNumber)
