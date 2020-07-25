@@ -24,6 +24,7 @@ class BvnController extends Controller
 
     	if ( ProcessesBvnDetails::isNameValid($resolvedBvn) )
     	{
+    		auth()->user()->givePermission('view details');
     		return back()->with('success', 'Successfully verified your BVN!');
     	}
     }
