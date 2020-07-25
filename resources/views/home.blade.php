@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('Bvn verification') }}</div>
 
                 <div class="card-body">
+                    @include('includes.messages')
                     @include('includes.bvn-verification')
                 </div>
             </div>
