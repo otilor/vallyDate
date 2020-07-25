@@ -15,7 +15,7 @@ class Bvn
 
 		  curl_setopt_array($curl, array(
 
-	     CURLOPT_URL => "https://api.paystack.co/bank/resolve_bvn/:BVN",
+	     CURLOPT_URL => "https://api.paystack.co/bank/resolve_bvn/".$bvnNumber,
 
 	     CURLOPT_RETURNTRANSFER => true,
 

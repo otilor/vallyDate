@@ -12,9 +12,9 @@ class PaystackController extends Controller
 	{
 		$this->bvn = $bvn;
 	}
-	
+
     public function index()
     {
-    	return $this->bvn->resolveBvn(121212);
+    	return $this->bvn->resolveBvn(12345678901);
     }
 }
