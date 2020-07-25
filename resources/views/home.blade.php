@@ -10,6 +10,10 @@
                 <div class="card-body">
                     @include('includes.messages')
                     @include('includes.bvn-verification')
+                    
+                    @can ('view details')
+                        <p>dfadsf</p>
+                    @endcan
                 </div>
             </div>
         </div>
