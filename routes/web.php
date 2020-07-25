@@ -17,3 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/paystack', 'Paystack\PaystackController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
