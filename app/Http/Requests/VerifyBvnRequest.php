@@ -24,7 +24,7 @@ class VerifyBvnRequest extends FormRequest
     public function rules()
     {
         return [
-            'bvn' => 'required'
+            'bvn' => 'required|digits:11'
         ];
     }
 
