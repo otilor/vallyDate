@@ -2,7 +2,7 @@
 
 namespace App\Services\AppServices\Bvn;
 
-use App\Helpers\String;
+use App\Helpers\String as NewString;
 
 /**
  * Process Bvn after getting details from Paystack API
@@ -24,6 +24,6 @@ trait ProcessesBvnDetails
 		$firstName = $bvnDetails->data->first_name;
 		$lastName = $bvnDetails->data->last_name;
 
-		return String::getFullName($firstName, $lastName);
+		return NewString::getFullName($firstName, $lastName);
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\AppServices\Bvn\ProcessesDetails;
+use App\Services\AppServices\Bvn\ProcessesBvnDetails;
 use App\Services\PaystackService\Bvn;
 use App\Http\Requests\VerifyBvnRequest;
 
 class BvnController extends Controller
 {
-	use ProcessesDetails;
+	use ProcessesBvnDetails;
 	function __construct(Bvn $bvn)
 	{
 		$this->bvn = $bvn;
@@ -22,7 +22,7 @@ class BvnController extends Controller
     		return back()->withErrors("Invalid BVN!");
     	}
 
-    	if ( ProcessesDetails::isNameValid($resolvedBvn) )
+    	if ( ProcessesBvnDetails::isNameValid($resolvedBvn) )
     	{
     		return back()->with('success', 'Successfully verified your BVN!');
     	}
