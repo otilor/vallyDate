@@ -12,6 +12,11 @@ trait ProcessesBvnDetails
 	public static function isNameValid($bvnDetails) : bool
 	{
 		$name = self::getFullNameFromBvnDetails($bvnDetails);
+		if ( auth()->user()->name === $name )
+		{
+			return true;
+		}
+		return false;
 	}
 
 	private static function getFullNameFromBvnDetails($bvnDetails) : string
