@@ -14,11 +14,6 @@
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
                       </div>
 
-                       <div class="form-group">
-                        <label for="exampleFormControlInput1">Current position</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Software Engineer, No job yet">
-                      </div>
-
                       <div class="form-group">
                         <label for="exampleFormControlInput1">Work mail address</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
