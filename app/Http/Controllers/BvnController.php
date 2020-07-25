@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Services\PaystackService\Bvn;
+use App\Http\Requests\VerifyBvnRequest;
 
 class BvnController extends Controller
 {
-    public function verify(Request $request)
+	function __construct(Bvn $bvn)
+	{
+		$this->bvn = $bvn;
+	}
+
+    public function verify(VerifyBvnRequest $request)
     {
-    	dd ( $request->all() );
+    	dd ($this->bvn->resolveBvn($request->bvn));
     }
 }

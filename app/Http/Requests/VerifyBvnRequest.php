@@ -32,6 +32,6 @@ class VerifyBvnRequest extends FormRequest
     {
         return [
             'bvn.required' => 'Your Bank Verification Number is required!',
-        ]
+        ];
     }
 }
