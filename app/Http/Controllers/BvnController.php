@@ -8,6 +8,6 @@ class BvnController extends Controller
 {
     public function verify(Request $request)
     {
-    	dd ( $Request->all() );
+    	dd ( $request->all() );
     }
 }
