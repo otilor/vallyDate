@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/paystack', 'Paystack\PaystackController@index');
+
+Route::post('/bvn/verify', 'BvnController@verify');
 
 Auth::routes();
 
