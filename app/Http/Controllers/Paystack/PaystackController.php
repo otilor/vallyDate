@@ -15,6 +15,7 @@ class PaystackController extends Controller
 
     public function index()
     {
+    	// Test verification
     	return $this->bvn->resolveBvn(12345678901);
     }
 }
