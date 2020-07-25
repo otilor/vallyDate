@@ -3,7 +3,7 @@
   <div class="form-group">
   	<h5 class=" text-bold" style="font-weight: 800;text-transform: capitalize;">Personal details</h5>
     <label for="exampleFormControlInput1">Name</label>
-    <p class="text-bold"><code>{{ auth()->user()->name }}</code></p>
+    <p class="text-bold"><code class="text-dark">{{ auth()->user()->name }}</code></p>
   </div> 
   <hr>
    <div class="form-group">
