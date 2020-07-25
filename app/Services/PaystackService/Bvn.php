@@ -48,11 +48,11 @@ class Bvn
 
 	  if ( $err ) 
 	  {
-	    echo "cURL Error #:" . $err;
+	    abort(503);
 	  } 
 	  else 
 	  {
-	    echo $response;
+	    return $response;
 	  }
 	  
 	}
