@@ -52,7 +52,7 @@ class Bvn
 	  } 
 	  else 
 	  {
-	    return $response;
+	    return json_decode($response);
 	  }
 	  
 	}

@@ -14,6 +14,7 @@ class BvnController extends Controller
 
     public function verify(VerifyBvnRequest $request)
     {
+    	// dd (gettype( $this->bvn->resolveBvn($request->bvn)) );
     	dd ($this->bvn->resolveBvn($request->bvn));
     }
 }
