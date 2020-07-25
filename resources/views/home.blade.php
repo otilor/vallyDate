@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            @cannot('view details')
             <div class="card">
                 <div class="card-header">{{ __('Bvn verification') }}</div>
 
@@ -11,11 +12,13 @@
                     @include('includes.messages')
                     @include('includes.bvn-verification')
                     
-                    @can ('view details')
-                        <p>dfadsf</p>
-                    @endcan
                 </div>
             </div>
+            @endcannot
+
+            @can ('view details')
+            @include('includes.details')
+            @endcan
         </div>
     </div>
 </div>
