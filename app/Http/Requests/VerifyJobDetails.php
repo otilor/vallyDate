@@ -13,7 +13,7 @@ class VerifyJobDetails extends FormRequest
      */
     public function authorize()
     {
-        if ( auth()->user()->hasPermission('view details') )
+        if ( auth()->user()->hasPermissionTo('view details') )
         {
             return true;
         }
