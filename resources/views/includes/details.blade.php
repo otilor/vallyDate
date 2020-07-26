@@ -22,7 +22,7 @@
 		<span class="badge badge-danger">{{ $job->to }}</span>
 	@empty
 	<p>You haven't supplied this information yet!</p>
-	<a class="btn btn-dark text-white">Add</a>
+	<a href="/jobs/create" class="btn btn-dark text-white">Add</a>
 	
 	</div>
 	@endforelse		
