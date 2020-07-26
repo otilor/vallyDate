@@ -12,24 +12,21 @@
 	<div class="text-center p-2">
 		
 	</div>
+	@forelse ($jobs as $job)
 	<div class="text-center m-5">
 		<h3 class="pb-1 mx-auto">
-			Role: Software Engineer
+			Role: {{ $job->role }}
 		</h3>
-		<h4>Company name: Upperlink ltd </h4>	
-		<h5><code class="text-dark">From: 2017 to 2020</code></h5>
-		<span class="badge badge-danger">Not verified!</span>
-		
+		<h4>Company name:{{ $job->company }}</h4>	
+		<h5><code class="text-dark">From: {{ $job->from }}</code></h5>
+		<span class="badge badge-danger">{{ $job->to }}</span>
+	@empty
+	<p>You haven't supplied this information yet!</p>
+	
 	
 	</div>
-	<div class="text-center m-2">
-		<h3 class="pb-1 mx-auto">
-			Role: Software Engineer
-		</h3>
-		<h4>Company name: Amazon Inc </h4>	
-		<h5><code class="text-dark">From: 2009 to 2015</code></h5>
-		<span class="badge badge-success">Verified!</span>
-	</div>
+	@endforelse		
+	
 
 
 
