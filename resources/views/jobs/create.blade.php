@@ -16,7 +16,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Company') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('company') is-invalid @enderror" name="company" value="{{ old('company') }}"  autofocus>
+                                <input type="text" class="form-control @error('company') is-invalid @enderror" name="company" value="{{ old('company') }}" required="" autofocus>
 
                                 @error('company')
                                     <span class="invalid-feedback" role="alert">
