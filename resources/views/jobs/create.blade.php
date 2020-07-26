@@ -40,6 +40,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="from" class="col-md-4 col-form-label text-md-right">{{ __('From') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="date" class="form-control"  name="from" value="{{ old('from') }}" required autocomplete="email">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="to" class="col-md-4 col-form-label text-md-right">{{ __('To') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="date" class="form-control"  name="to" value="{{ old('to') }}" required autocomplete="email">
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-dark">
