@@ -24,3 +24,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/jobs/create', 'JobController@create');
+
+Route::post('/jobs/store', 'JobController@store')->name('jobs.store');
