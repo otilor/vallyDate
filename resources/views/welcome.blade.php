@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://github.com/GabrielFemi/vallyDate">GitHub</a>
+                    <a rel="noopener noreferrer" target = "_blank" href="https://github.com/GabrielFemi/vallyDate">GitHub</a>
                 </div>
             </div>
         </div>
