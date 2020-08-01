@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\AppServices\Job\JobService;
 
 class HomeController extends Controller
 {
@@ -11,9 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(JobService $jobService)
     {
         $this->middleware('auth');
+        $this->jobService = $jobService;
     }
 
     /**
@@ -23,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $jobs = auth()->user()->jobs;
+        $jobs = $this->jobService->getJobs(); 
         return view('home', compact('jobs'));
-    }
+    }   
 }
