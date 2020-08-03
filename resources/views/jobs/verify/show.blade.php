@@ -8,5 +8,25 @@
 			{{ $job->role }} @ {{ $job->company }}
 		</h3>
 	<code class="text-dark mt-1"><h4 class = "text-center">Duration: {{ $job->duration }} </h4>	</code>
+	@if($job->verified === 'Verified!')
+	<code class="text-dark mt-1">
+		<h4 class = "text-center">Status: 
+			<span class = "text-success">
+				{{ $job->verified }}
+			</span>
+		 </h4>	
+		</code>
+	@else	
+	<code class="text-dark mt-1">
+		<h4 class = "text-center">Status: 
+			<span class = "text-danger">
+				{{ $job->verified }}
+			</span>
+		</h4>
+		<a>{{ $job->validation_token }}</a> <span class="badge badge-danger">Send this token to your HR</span>
+	</code>
+	@endif
+
+
 </div>
 @endsection

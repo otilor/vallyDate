@@ -2,6 +2,7 @@
 
 namespace App\Services\AppServices\Job;
 use Cache;
+use Str;
 /**
  * Job service class
  */
@@ -16,6 +17,7 @@ class JobService
 	{
 		if (! is_null($job)) {
             $job->setAttribute('duration', $job->from . " to " . $job->to);
+            $job->setAttribute('validation_token', Str::random(16));
         } else {
             return redirect('/');
         }
