@@ -20,7 +20,12 @@
 		<h4>Company name:{{ $job->company }}</h4>	
 		<h5><code class="text-dark">From: {{ $job->from }}</code></h5>
 		<h5><code class="text-dark">To: {{ $job->from }}</code></h5>
-		<span class="badge badge-success">Verified!</span>
+		@if ($job->verified === 'Verified!')
+			<span class="badge badge-success">{{ $job->verified }}</span>
+		@else
+			<span class="badge badge-danger">{{ $job->verified }}</span><br>
+			<a href="/jobs/{{ $job->id }}/verify" class="btn btn-sm btn-primary">Get verification link</a>
+		@endif
 	@empty
 	<p>You haven't supplied this information yet!</p>
 	<a href="/jobs/create" class="btn btn-dark text-white">Add</a>

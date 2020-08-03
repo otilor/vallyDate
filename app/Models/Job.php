@@ -8,4 +8,15 @@ class Job extends Model
 {
    //
 	protected $guarded = [];
+	
+	public function getVerifiedAttribute($value)
+	{
+		if ($value === 1)
+		{
+            return "Verified!";
+		} else {
+			return "Unverified!";
+		}
+	}
+	
 }

@@ -20,6 +20,7 @@ class CreateJobsTable extends Migration
             $table->string('company');
             $table->date('from');
             $table->date('to');
+            $table->boolean('verified')->default(false);
             $table->timestamps();
 
         });
