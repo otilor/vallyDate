@@ -22,7 +22,6 @@ class CreateJobsTable extends Migration
             $table->date('to');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

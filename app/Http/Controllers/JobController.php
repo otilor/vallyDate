@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
 use Illuminate\Http\Request;
 use App\Http\Requests\VerifyJobDetails;
 
 class JobController extends Controller
 {
+    function __construct(Job $job)
+    {
+        $this->job = $job;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -36,6 +41,7 @@ class JobController extends Controller
     public function store(VerifyJobDetails $request)
     {
         //
+        return $this->job->create($request->all());
     }
 
     /**

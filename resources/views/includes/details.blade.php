@@ -19,7 +19,8 @@
 		</h3>
 		<h4>Company name:{{ $job->company }}</h4>	
 		<h5><code class="text-dark">From: {{ $job->from }}</code></h5>
-		<span class="badge badge-danger">{{ $job->to }}</span>
+		<h5><code class="text-dark">To: {{ $job->from }}</code></h5>
+		<span class="badge badge-success">Verified!</span>
 	@empty
 	<p>You haven't supplied this information yet!</p>
 	<a href="/jobs/create" class="btn btn-dark text-white">Add</a>

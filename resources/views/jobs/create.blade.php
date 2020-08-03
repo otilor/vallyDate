@@ -10,6 +10,7 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('jobs.store') }}">
+                        <input type = "hidden" value = "{{ auth()->user()->id }}" name = "user_id">
                         @csrf
                         <hr>
                         <div class="form-group row">

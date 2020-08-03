@@ -16,7 +16,7 @@ class JobService
 	public function getJobs()
 	{
 		$jobs = Cache::remember("jobs", 100, function () {
-			return auth()->user()->jobs;	
+			return auth()->user()->jobs;
 		});
 		return $jobs;
 	}
