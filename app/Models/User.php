@@ -13,7 +13,7 @@ class User extends Authenticatable
 
     public function jobs()
     {
-        return $this->hasMany('App\Models\Job');
+        return $this->hasMany(UserJob::class);
     }
     /**
      * The attributes that are mass assignable.
