@@ -23,7 +23,19 @@
 				{{ $job->verified }}
 			</span>
 		</h4>
-		<a>{{ $job->validation_token }}</a> <span class="badge badge-danger">Send this token to your HR</span>
+		<a>{{ $job->validation_token }}</a> <span class="badge badge-info">This token will be sent to your HR</span>
+		<form action = "{{ route('jobs.verify', $job->id) }}" method = "post">
+			@csrf
+			@include('includes.messages')
+			<div class="form-group" method = "post">
+				<div>
+					<input name="hr_mail" class = "form-control" type="email" placeholder="hr@example.com" required="true">
+				</div>
+				<div>
+					<input class = "form-control btn btn-dark mt-2" value="Send" type="submit">
+				</div>
+			</div>	
+		</form>
 	</code>
 	@endif
 

@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Services\AppServices\Job;
+use App\Models\User;
+use App\Services\PayStackService\Bvn;
 use Cache;
+use Illuminate\Support\Facades\Auth;
 use Str;
 /**
  * Job service class

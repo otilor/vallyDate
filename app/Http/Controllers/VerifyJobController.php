@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\HRRequest;
 use App\Models\Job;
-use App\Services\AppServices\Job\JobService;    
+use App\Services\AppServices\Job\JobService;
+use App\Services\AppServices\Email\EmailService;
+use Illuminate\Http\Request;    
 
 class VerifyJobController extends Controller
 {
-    function __construct(Job $job, JobService $jobService)
+    function __construct(Job $job, JobService $jobService, EmailService $emailService)
     {
+        $this->middleware('auth');
         $this->job = $job;
         $this->jobService = $jobService;
+        $this->emailService = $emailService;
     }
     /**
      * Display a listing of the resource.
@@ -20,7 +24,7 @@ class VerifyJobController extends Controller
      */
     public function index()
     {
-        //
+        return view('jobs.verify.index');
     }
 
     /**
@@ -39,9 +43,11 @@ class VerifyJobController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HRRequest $request)
     {
         //
+        $this->emailService->sendMailToHR($request->hr_mail);
+        return back()->with('success', 'Successfully Sent mail!');
     }
 
     /**
