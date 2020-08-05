@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Job;
+use App\Models\UserJob;
 use Illuminate\Http\Request;
 use App\Http\Requests\VerifyJobDetails;
 
 class JobController extends Controller
 {
-    function __construct(Job $job)
+    function __construct(UserJob $job)
     {
         $this->job = $job;
     }

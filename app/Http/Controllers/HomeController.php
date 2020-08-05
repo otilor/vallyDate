@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $jobs = $this->jobService->getJobs(); 
+        $jobs = $this->jobService->getJobs();
         return view('home', compact('jobs'));
     }   
 }

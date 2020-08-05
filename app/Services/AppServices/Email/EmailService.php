@@ -18,6 +18,6 @@ class EmailService
 
 	public function sendMailToHR($email)
 	{
-		return dispatch(new SendHRMailJob($email));
+		dispatch(new SendHRMailJob($email));
 	}
 }

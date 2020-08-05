@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\HRRequest;
-use App\Models\Job;
-use App\Services\AppServices\Job\JobService;
+use App\Models\UserJob;
 use App\Services\AppServices\Email\EmailService;
+use App\Services\AppServices\Job\JobService;
 use Illuminate\Http\Request;    
 
 class VerifyJobController extends Controller
 {
-    function __construct(Job $job, JobService $jobService, EmailService $emailService)
+    function __construct(UserJob $job, JobService $jobService, EmailService $emailService)
     {
         $this->middleware('auth');
         $this->job = $job;
