@@ -1,6 +1,7 @@
 <?php
 namespace App\Services\AppServices\Email;
 
+use App\Jobs\SendHRMailJob;
 use App\Mail\HRMail;
 use Illuminate\Support\Facades\Mail;
 
@@ -17,6 +18,6 @@ class EmailService
 
 	public function sendMailToHR($email)
 	{
-		return $this->mail::to($email)->send(new HRMail);
+		return dispatch(new SendHRMailJob($email));
 	}
 }
